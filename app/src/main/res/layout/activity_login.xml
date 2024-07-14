@@ -24,31 +24,33 @@
 
     <EditText
         android:id="@+id/email"
-        android:textSize="14sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="108dp"
         android:background="@drawable/rounded_edittext"
+        android:fontFamily="@font/poppins_regular"
         android:hint="Masukkan E-mail Anda"
         android:padding="16dp"
-        android:fontFamily="@font/poppins_regular"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/loginTitle" />
 
     <EditText
         android:id="@+id/password"
-        android:textSize="14sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/rounded_edittext"
         android:drawableEnd="@drawable/ic_eye"
+        android:fontFamily="@font/poppins_regular"
         android:hint="Masukkan Kata Sandi Anda"
         android:inputType="textPassword"
         android:padding="16dp"
-        android:fontFamily="@font/poppins_regular"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/email" />
 
@@ -57,10 +59,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Lupa Kata Sandi?"
         android:textColor="#000000"
         android:textSize="14sp"
-        android:fontFamily="@font/poppins_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/password" />
 
@@ -68,42 +70,58 @@
         android:id="@+id/loginButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="56dp"
         android:backgroundTint="#1A237E"
+        android:fontFamily="@font/poppins_bold"
         android:text="Masuk"
         android:textColor="#FFFFFF"
-        android:fontFamily="@font/poppins_bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/forgotPassword" />
 
     <TextView
-        android:id="@+id/registerLink"
+        android:id="@+id/privacyPolicy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Belum mendaftar? Daftar Sekarang"
-        android:textColor="#000000"
-        android:textSize="14sp"
+        android:layout_marginTop="28dp"
         android:fontFamily="@font/poppins_regular"
+        android:text="Dengan mendaftar, saya menyetujui Syarat Dan Ketentuan serta kebijakan Privasi yang tersedia"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginButton" />
+        app:layout_constraintTop_toBottomOf="@id/facebookLoginButton" />
 
     <TextView
         android:id="@+id/orLoginWith"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
         android:text="Atau masuk dengan"
         android:textColor="#000000"
         android:textSize="14sp"
-        android:fontFamily="@font/poppins_regular"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registerLink" />
+
+    <TextView
+        android:id="@+id/registerLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Belum mendaftar? Daftar Sekarang"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginButton" />
 
     <Button
         android:id="@+id/googleLoginButton"
@@ -113,12 +131,12 @@
         android:backgroundTint="#FFFFFF"
         android:drawableLeft="@drawable/ic_google"
         android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins_regular"
         android:padding="10dp"
         android:text="Google"
         android:textColor="#000000"
-        android:fontFamily="@font/poppins_regular"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/orLoginWith" />
 
@@ -126,31 +144,17 @@
         android:id="@+id/facebookLoginButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#FFFFFF"
         android:drawableLeft="@drawable/ic_facebook"
         android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins_regular"
         android:padding="10dp"
         android:text="Facebook"
         android:textColor="#000000"
-        android:fontFamily="@font/poppins_regular"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/googleLoginButton" />
-
-    <TextView
-        android:id="@+id/privacyPolicy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Dengan mendaftar, saya menyetujui Syarat Dan Ketentuan serta kebijakan Privasi yang tersedia"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        android:fontFamily="@font/poppins_regular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/facebookLoginButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

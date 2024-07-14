@@ -16,11 +16,12 @@
         app:layout_constraintBottom_toTopOf="@+id/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="180dp"
         android:layout_marginBottom="16dp"/>
 
     <TextView
         android:id="@+id/title"
+        android:layout_margin="24dp"
         android:textAlignment="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,6 +36,7 @@
 
     <TextView
         android:id="@+id/description"
+        android:layout_margin="12dp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Bisa salurkan bantuan tanpa keluar rumah untuk sesama"

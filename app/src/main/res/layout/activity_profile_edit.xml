@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingTop="0dp"
-        android:paddingBottom="16dp"
+        android:paddingBottom="32dp"
         android:gravity="center_horizontal"
         android:layout_below="@id/back_button">
 
@@ -192,6 +192,7 @@
         <!-- Save Button -->
         <Button
             android:id="@+id/save_button"
+            android:layout_marginTop="150dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#1A237E"
