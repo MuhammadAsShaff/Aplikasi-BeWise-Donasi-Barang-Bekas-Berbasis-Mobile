@@ -1,32 +1,64 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="200dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="8dp"
-    android:background="@drawable/rounded_corner_background"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/rounded_corner_background_card"
     android:layout_marginEnd="8dp">
 
+    <!-- Ilustrasi -->
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="140dp"
         android:layout_height="120dp"
-        android:src="@drawable/ic_dokumentasi_image"
-        android:contentDescription="Dokumentasi Image" />
+        android:src="@drawable/ic_ilustrasi_dokum"
+        android:contentDescription="Ilustrasi Dokumentasi"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="52dp" />
 
-    <TextView
-        android:layout_width="match_parent"
+    <!-- Gambar Dokumentasi -->
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dokumentasi Donasi"
-        android:textSize="14sp"
-        android:textColor="#000000"
-        android:fontFamily="@font/poppins_bold"
-        android:layout_marginTop="8dp" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kegiatan donasi yang telah dilakukan oleh para donatur."
-        android:textSize="12sp"
-        android:textColor="#000000"
-        android:fontFamily="@font/poppins_regular"
-        android:layout_marginTop="4dp" />
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:src="@drawable/gambar_dokum1"
+            android:contentDescription="Dokumentasi Image 1"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:src="@drawable/gambar_dokum2"
+            android:contentDescription="Dokumentasi Image 2"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:src="@drawable/gambar_dokum3"
+            android:contentDescription="Dokumentasi Image 3"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:src="@drawable/gambar_dokum1"
+            android:contentDescription="Dokumentasi Image 4"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:src="@drawable/gambar_dokum2"
+            android:contentDescription="Dokumentasi Image 5"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="8dp" />
+    </LinearLayout>
 </LinearLayout>

@@ -326,7 +326,9 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/rounded_corner_background">
 
                     <!-- Card Items for Program -->
                     <include layout="@layout/item_card_program"/>
@@ -355,12 +357,10 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_button_white">>
 
                     <!-- Card Items for Dokumentasi -->
-                    <include layout="@layout/item_card_dokumentasi" />
-                    <include layout="@layout/item_card_dokumentasi" />
-                    <include layout="@layout/item_card_dokumentasi" />
                     <include layout="@layout/item_card_dokumentasi" />
                 </LinearLayout>
             </HorizontalScrollView>
@@ -381,10 +381,11 @@
                 android:layout_marginTop="8dp"
                 android:scrollbars="none">
 
-                <LinearLayout
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:layout_marginEnd="12dp">
 
                     <!-- Card Items for Harapan Donatur -->
                     <include layout="@layout/item_card_harapan_donatur" />

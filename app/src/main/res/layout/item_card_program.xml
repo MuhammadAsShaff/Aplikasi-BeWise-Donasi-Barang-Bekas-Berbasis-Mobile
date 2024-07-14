@@ -1,10 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="380dp"
+    android:layout_width="379dp"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp"
-    android:background="@drawable/rounded_corner_background"
-    android:layout_marginEnd="8dp">
+    android:padding="12dp"
+    android:background="@drawable/rounded_corner_background_card"
+    android:layout_marginEnd="12dp">
 
     <ImageView
         android:layout_width="match_parent"
@@ -12,7 +12,8 @@
         android:src="@drawable/ic_dokumentasi_image"
         android:contentDescription="Program Image"
         android:scaleType="centerCrop"
-        android:background="@drawable/rounded_image_background" />
+        android:background="@drawable/rounded_image_background"
+        android:clipToOutline="true" />
 
     <TextView
         android:layout_width="match_parent"
