@@ -6,10 +6,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/blue"
         app:menu="@menu/bottom_nav_menu"
         app:labelVisibilityMode="labeled"
         app:itemIconSize="32dp"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         app:itemTextAppearanceActive="@style/TextAppearance.BottomNavigationView.Active"
         app:itemTextAppearanceInactive="@style/TextAppearance.BottomNavigationView.Inactive" />
 </merge>
