@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/rounded_corner_background"
+    android:layout_marginEnd="8dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_dokumentasi_image"
+        android:contentDescription="Program Image" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Panti Asuhan Ini Membutuhkan Pertolongan Kita"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ayo sumbangkan barang dan pakaian yang sudah tidak terpakai namun masih layak digunakan."
+        android:textSize="12sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginTop="4dp" />
+</LinearLayout>
