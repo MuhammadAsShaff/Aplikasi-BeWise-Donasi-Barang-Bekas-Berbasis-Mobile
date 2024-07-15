@@ -119,7 +119,9 @@
                 android:hint="Deskripsi Donasi Ini..."
                 android:background="@drawable/edit_text_background"
                 android:padding="12dp"
-                android:minHeight="100dp"/>
+                android:minHeight="100dp"
+                android:gravity="top|start"/>
+
 
             <!-- Upload Gambar -->
             <TextView
