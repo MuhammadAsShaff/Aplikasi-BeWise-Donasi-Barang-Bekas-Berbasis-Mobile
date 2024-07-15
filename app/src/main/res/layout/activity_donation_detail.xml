@@ -32,112 +32,171 @@
             android:fontFamily="@font/poppins_bold"/>
     </LinearLayout>
 
-    <!-- Gambar Donasi -->
-    <ImageView
+    <!-- Konten yang dapat di-scroll -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/donation_image"
-        android:scaleType="centerCrop"
-        android:contentDescription="Donation Image"/>
-
-    <!-- Detail Donasi -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ayo berbagi pakaian yang layak pakai"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:fontFamily="@font/poppins_bold"
-            android:layout_marginBottom="4dp" />
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="8dp">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Panti Asuhan Ujung Jalan"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="18sp"
-                android:fontFamily="@font/poppins_regular"/>
+            <!-- Gambar Donasi -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/donation_image"
+                android:scaleType="centerCrop"
+                android:contentDescription="Donation Image"/>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Detail Donasi -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sisa Hari 58"
-                android:textColor="@color/blue"
-                android:textSize="18sp"
-                android:fontFamily="@font/poppins_bold"
-                android:layout_gravity="end"/>
+                android:orientation="vertical"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ayo berbagi pakaian yang layak pakai"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginBottom="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Panti Asuhan Ujung Jalan"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/poppins_regular"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sisa Hari 58"
+                        android:textColor="@color/blue"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:layout_gravity="end"/>
+                </LinearLayout>
+
+                <!-- Progress Bar -->
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:progress="50"
+                    android:max="100"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progressDrawable="@drawable/progress_bar"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Judul Deskripsi -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deskripsi:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mari kita berbagi kebahagiaan dengan memberikan pakaian yang layak pakai kepada saudara-saudara kita yang membutuhkan. Pakaian yang Anda sumbangkan akan sangat berarti bagi mereka yang kurang mampu. Bersama-sama, kita bisa membuat perbedaan."
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginBottom="16dp"
+                    android:justificationMode="inter_word"/>
+
+                <!-- Judul Pelaporan -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pelaporan:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginBottom="4dp" />
+
+                <!-- Inputan Pelaporan -->
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="Laporkan Penggunaan Dana KeDonatur"
+                    android:background="@drawable/edit_text_background"
+                    android:padding="12dp"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:minHeight="100dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Tombol Kirim -->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kirim"
+                    android:backgroundTint="@color/blue"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/poppins_bold"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Garis Horizontal -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Terimakasih -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Terimakasih telah mempercayai"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BeWise"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-18dp"
+                    android:text="sebagai wadah untuk berdonasi"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"/>
+            </LinearLayout>
         </LinearLayout>
-
-        <!-- Progress Bar -->
-        <ProgressBar
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            android:progress="50"
-            android:max="100"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:progressDrawable="@drawable/progress_bar"
-            android:layout_marginBottom="16dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Mari kita berbagi kebahagiaan dengan memberikan pakaian yang layak pakai kepada saudara-saudara kita yang membutuhkan. Pakaian yang Anda sumbangkan akan sangat berarti bagi mereka yang kurang mampu. Bersama-sama, kita bisa membuat perbedaan."
-            android:textColor="@android:color/black"
-            android:textSize="14sp"
-            android:fontFamily="@font/poppins_regular"
-            android:layout_marginBottom="16dp"
-            android:justificationMode="inter_word"/>
-
-
-        <!-- Garis Horizontal -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#E0E0E0"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Terimakasih -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Terimakasih telah mempercayai"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="14sp"
-            android:fontFamily="@font/poppins_regular"
-            android:gravity="center"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="BeWise"
-            android:textColor="@color/blue"
-            android:textSize="14sp"
-            android:fontFamily="@font/poppins_bold"
-            android:gravity="center"
-            android:layout_marginBottom="16dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-18dp"
-            android:text="sebagai wadah untuk berdonasi"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="14sp"
-            android:fontFamily="@font/poppins_regular"
-            android:gravity="center"/>
-    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
