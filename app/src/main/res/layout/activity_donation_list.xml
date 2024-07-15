@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:background="@android:color/white">
+
+    <!-- Header dengan Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        android:background="@drawable/profile_header_background"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="-6dp"
+            android:textSize="14sp"
+            android:hint="Cari Donasi Yang Sudah Ada"
+            android:paddingLeft="12dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/rounded_corner_background"
+            android:drawablePadding="8dp"
+            android:textColorHint="#757575"
+            android:inputType="text"
+            android:fontFamily="@font/poppins_regular"/>
+    </LinearLayout>
+
+    <!-- Daftar Donasi -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:padding="12dp">
+
+            <!-- Include Card Donasi -->
+            <include layout="@layout/item_card_donasi" />
+            <include layout="@layout/item_card_donasi" />
+            <include layout="@layout/item_card_donasi" />
+            <include layout="@layout/item_card_donasi" />
+            <include layout="@layout/item_card_donasi" />
+            <include layout="@layout/item_card_donasi" />
+            <include layout="@layout/item_card_donasi" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
