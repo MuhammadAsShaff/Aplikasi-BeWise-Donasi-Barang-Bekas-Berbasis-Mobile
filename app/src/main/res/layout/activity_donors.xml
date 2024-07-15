@@ -2,12 +2,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="0dp"
     android:background="@android:color/white">
 
     <!-- Header dengan Search Bar -->
-
-    <!-- Daftar Donasi -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,26 +39,33 @@
             android:textSize="14sp" />
     </LinearLayout>
 
+    <!-- List Pendonatur -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="16dp"
-            android:padding="12dp">
+            android:orientation="vertical">
 
-            <!-- Include Card Donasi -->
-            <include layout="@layout/item_card_donasi" />
-            <include layout="@layout/item_card_donasi" />
-            <include layout="@layout/item_card_donasi" />
-            <include layout="@layout/item_card_donasi" />
-            <include layout="@layout/item_card_donasi" />
-            <include layout="@layout/item_card_donasi" />
-            <include layout="@layout/item_card_donasi" />
-
+            <!-- Card Pendonatur -->
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
+            <include layout="@layout/item_card_donor"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
