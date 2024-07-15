@@ -42,6 +42,7 @@ android {
 }
 
 dependencies {
+    implementation ("com.google.android.gms:play-services-maps:18.0.2")
     implementation ("androidx.coordinatorlayout:coordinatorlayout:1.1.0")
     implementation("com.google.android.material:material:1.3.0")
     implementation("androidx.viewpager2:viewpager2:1.0.0")
