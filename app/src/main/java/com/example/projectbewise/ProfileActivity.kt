@@ -32,7 +32,7 @@ class   ProfileActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_profile -> {
-                    // start ProfileActivity or refresh
+                    // start ProfileActivityor refresh
                     true
                 }
                 else -> false
