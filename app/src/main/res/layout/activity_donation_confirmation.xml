@@ -46,19 +46,19 @@
             <!-- Informasi Pendonatur -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_height="100dp"
                 android:background="#E4F2FD"
+                android:orientation="horizontal"
                 android:padding="16dp"
-                android:layout_marginBottom="16dp">
+                android:gravity="center_vertical">
 
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/ic_profile"
-                    android:contentDescription="Profile Image"
                     android:layout_marginEnd="16dp"
-                    android:background="@drawable/bulat_profile"/>
+                    android:background="@drawable/bulat_profile"
+                    android:contentDescription="Profile Image"
+                    android:src="@drawable/ic_profile" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -69,36 +69,49 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
                         android:text="Benny Angelo"
                         android:textColor="@android:color/black"
-                        android:textSize="16sp"
-                        android:fontFamily="@font/poppins_bold"/>
+                        android:textSize="16sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
                         android:text="#JX33f2sf"
                         android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/poppins_regular"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Tolong berikan barang ini kepada panti asuhan ujung jalan supaya barang nya bisa di gunakan dan bermanfaat"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginLeft="-20dp"
-                        android:justificationMode="inter_word"
-                        android:fontFamily="@font/poppins_regular"/>
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:src="@drawable/ic_box"
-                    android:contentDescription="Box Icon"/>
+                    android:contentDescription="Box Icon"
+                    android:src="@drawable/ic_box" />
+            </LinearLayout>
+
+            <!-- Pesan Donasi -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E4F2FD"
+                android:orientation="horizontal"
+                android:paddingTop="0dp"
+                android:paddingBottom="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="-16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:justificationMode="inter_word"
+                    android:text="Tolong berikan barang ini kepada panti asuhan ujung jalan supaya barang nya bisa di gunakan dan bermanfaat"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <!-- Gambar Barang -->
