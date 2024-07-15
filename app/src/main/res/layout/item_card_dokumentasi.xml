@@ -9,11 +9,11 @@
     <!-- Ilustrasi -->
     <ImageView
         android:layout_width="140dp"
-        android:layout_height="120dp"
+        android:layout_height="140dp"
         android:src="@drawable/ic_ilustrasi_dokum"
         android:contentDescription="Ilustrasi Dokumentasi"
         android:scaleType="centerCrop"
-        android:layout_marginEnd="52dp" />
+        android:layout_marginEnd="32dp" />
 
     <!-- Gambar Dokumentasi -->
     <LinearLayout
@@ -22,43 +22,43 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="120dp"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
             android:src="@drawable/gambar_dokum1"
             android:contentDescription="Dokumentasi Image 1"
             android:scaleType="centerCrop"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="0dp" />
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="120dp"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
             android:src="@drawable/gambar_dokum2"
             android:contentDescription="Dokumentasi Image 2"
             android:scaleType="centerCrop"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="0dp" />
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="120dp"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
             android:src="@drawable/gambar_dokum3"
             android:contentDescription="Dokumentasi Image 3"
             android:scaleType="centerCrop"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="0dp" />
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="120dp"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
             android:src="@drawable/gambar_dokum1"
             android:contentDescription="Dokumentasi Image 4"
             android:scaleType="centerCrop"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="0dp" />
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="120dp"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
             android:src="@drawable/gambar_dokum2"
             android:contentDescription="Dokumentasi Image 5"
             android:scaleType="centerCrop"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="0dp" />
     </LinearLayout>
 </LinearLayout>

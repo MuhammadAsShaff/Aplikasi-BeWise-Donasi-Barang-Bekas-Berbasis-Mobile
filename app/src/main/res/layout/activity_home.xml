@@ -358,7 +358,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="@drawable/rounded_button_white">>
+                    >
 
                     <!-- Card Items for Dokumentasi -->
                     <include layout="@layout/item_card_dokumentasi" />
@@ -384,8 +384,19 @@
                 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginEnd="12dp">
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/rounded_corner_background_card">
+
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/ic_harapan_donasi"
+                        android:contentDescription="Ilustrasi Dokumentasi"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="30dp"/>
 
                     <!-- Card Items for Harapan Donatur -->
                     <include layout="@layout/item_card_harapan_donatur" />
