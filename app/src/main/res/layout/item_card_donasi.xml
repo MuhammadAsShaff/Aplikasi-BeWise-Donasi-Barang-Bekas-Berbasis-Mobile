@@ -61,13 +61,13 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Donasi"
+                android:text="Selengkapnya"
                 android:backgroundTint="#1A237E"
                 android:textColor="@android:color/white"
                 android:fontFamily="@font/poppins_bold"
                 android:paddingLeft="28dp"
                 android:paddingRight="28dp"
-                android:layout_marginEnd="52dp"
+                android:layout_marginEnd="12dp"
                 />
 
             <TextView
