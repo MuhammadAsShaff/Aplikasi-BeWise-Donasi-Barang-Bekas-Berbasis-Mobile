@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "509336580000",
+    "project_id": "projectbewise-fcd9d",
+    "storage_bucket": "projectbewise-fcd9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509336580000:android:f3bc50db7ef8eb46c17ec5",
+        "android_client_info": {
+          "package_name": "com.example.projectbewise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWvJoXv4jyhy1fkRNI989JjCyeNdawSv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
