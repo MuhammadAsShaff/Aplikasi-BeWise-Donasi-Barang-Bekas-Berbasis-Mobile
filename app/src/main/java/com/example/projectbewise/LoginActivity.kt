@@ -41,8 +41,10 @@ class LoginActivity : AppCompatActivity() {
                                             val phone = document.getString("phone")
                                             // Use the user information as needed
                                             Toast.makeText(this, "Welcome $fullName", Toast.LENGTH_SHORT).show()
-                                            // Navigate to main activity or other destination
-                                            val intent = Intent(this, MainActivity::class.java)
+                                            // Navigate to main activity with user data
+                                            val intent = Intent(this, MainActivity::class.java).apply {
+                                                putExtra("fullName", fullName)
+                                            }
                                             startActivity(intent)
                                             finish()
                                         } else {
