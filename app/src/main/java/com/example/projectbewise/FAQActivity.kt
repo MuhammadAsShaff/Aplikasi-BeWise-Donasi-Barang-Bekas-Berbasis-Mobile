@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
-class AboutActivity : AppCompatActivity() {
+class FAQActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_about)
+        setContentView(R.layout.faq)
 
         // Menambahkan fungsi untuk tombol back
         val backButton = findViewById<ImageButton>(R.id.back_button)

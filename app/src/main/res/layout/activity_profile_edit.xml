@@ -28,7 +28,7 @@
         android:gravity="center_horizontal"
         android:layout_below="@id/back_button">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="96dp"
             android:layout_height="96dp"
@@ -66,15 +66,13 @@
     <LinearLayout
         android:id="@+id/form_and_button_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_below="@id/profile_header"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/rounded_corner_background"
-        android:layout_marginTop="-10dp">
+        android:background="@drawable/rounded_corner_background">
 
         <!-- Form -->
         <LinearLayout
@@ -95,11 +93,11 @@
                 android:layout_marginBottom="4dp" />
 
             <EditText
+                android:id="@+id/edit_full_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14dp"
                 android:hint="Nama Lengkap"
-                android:text="Benny Angelo"
                 android:padding="8dp"
                 android:background="@drawable/edit_text_background"
                 android:layout_marginBottom="12dp"
@@ -116,11 +114,11 @@
                 android:layout_marginBottom="4dp" />
 
             <EditText
+                android:id="@+id/edit_age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14dp"
                 android:hint="Usia"
-                android:text="19"
                 android:padding="8dp"
                 android:background="@drawable/edit_text_background"
                 android:layout_marginBottom="12dp"
@@ -137,11 +135,11 @@
                 android:layout_marginBottom="4dp" />
 
             <EditText
+                android:id="@+id/edit_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14dp"
                 android:hint="No Telepon"
-                android:text="+62 2284 9202 82"
                 android:padding="8dp"
                 android:background="@drawable/edit_text_background"
                 android:layout_marginBottom="12dp"
@@ -158,11 +156,11 @@
                 android:layout_marginBottom="4dp" />
 
             <EditText
+                android:id="@+id/edit_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="14dp"
                 android:hint="Alamat E-Mail"
-                android:text="benny11@gmail.com"
                 android:padding="8dp"
                 android:background="@drawable/edit_text_background"
                 android:layout_marginBottom="12dp"
@@ -179,6 +177,7 @@
                 android:layout_marginBottom="4dp" />
 
             <EditText
+                android:id="@+id/edit_address"
                 android:layout_width="match_parent"
                 android:textSize="14dp"
                 android:layout_height="wrap_content"
@@ -186,20 +185,19 @@
                 android:background="@drawable/edit_text_background"
                 android:fontFamily="@font/poppins_regular"
                 android:hint="Alamat Rumah"
-                android:padding="8dp"
-                android:text="Jl. Riau" />
+                android:padding="8dp" />
         </LinearLayout>
 
         <!-- Save Button -->
         <Button
             android:id="@+id/save_button"
-            android:layout_marginTop="150dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:backgroundTint="#1A237E"
+            android:fontFamily="@font/poppins_bold"
             android:text="Simpan"
-            android:textColor="@android:color/white"
-            android:fontFamily="@font/poppins_bold" />
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
 </RelativeLayout>

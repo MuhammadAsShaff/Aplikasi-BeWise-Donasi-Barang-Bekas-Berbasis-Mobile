@@ -14,7 +14,7 @@
         android:padding="62dp"
         android:gravity="center_horizontal">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="96dp"
             android:layout_height="96dp"
@@ -56,11 +56,12 @@
         android:paddingTop="16dp"
         android:paddingBottom="0dp"
         android:layout_below="@id/profile_header"
-        android:layout_above="@id/navigation_bar_container"
+        android:layout_above="@id/navigation_bar_include"
         android:layout_marginTop="-5dp"
         android:gravity="center_horizontal">
 
         <LinearLayout
+            android:id="@+id/edit_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -99,6 +100,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/about_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -137,6 +139,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/faq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -175,6 +178,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -213,21 +217,17 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/navigation_bar_container"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_bar_include"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        android:gravity="center_horizontal">
-
-        <include
-            android:id="@+id/navigation_bar_include"
-            layout="@layout/navigation_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true" />
-
-    </LinearLayout>
-
+        android:background="@color/blue"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconSize="32dp"
+        app:itemTextAppearanceActive="@style/TextAppearance.BottomNavigationView.Active"
+        app:itemTextAppearanceInactive="@style/TextAppearance.BottomNavigationView.Inactive" />
 </RelativeLayout>
