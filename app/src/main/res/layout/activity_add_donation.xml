@@ -4,7 +4,33 @@
     android:orientation="vertical"
     android:padding="0dp"
     android:background="@android:color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@drawable/profile_header_background"
+        android:gravity="center_vertical">
 
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-3dp"
+            android:text="Menambah Tempat Donasi"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"/>
+    </LinearLayout>
     <!-- Header yang tetap di atas -->
     <LinearLayout
         android:layout_width="match_parent"

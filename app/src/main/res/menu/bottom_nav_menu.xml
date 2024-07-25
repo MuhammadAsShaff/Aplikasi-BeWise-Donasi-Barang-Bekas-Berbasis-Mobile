@@ -6,13 +6,11 @@
         android:icon="@drawable/ic_home"
         android:title="Beranda"
         app:showAsAction="ifRoom" />
-
     <item
-        android:id="@+id/navigation_voucher"
+        android:id="@+id/navigation_pengiriman"
         android:icon="@drawable/ic_voucher"
-        android:title="Voucher"
+        android:title="Pengiriman"
         app:showAsAction="ifRoom" />
-
     <item
         android:id="@+id/navigation_donation"
         android:icon="@drawable/ic_donasi"
@@ -22,7 +20,7 @@
     <item
         android:id="@+id/navigation_history"
         android:icon="@drawable/ic_riwayat"
-        android:title="Riwayat"
+        android:title="Donatur"
         app:showAsAction="ifRoom" />
 
     <item
