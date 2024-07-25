@@ -109,10 +109,23 @@ class ProfileEditActivity : AppCompatActivity() {
     private fun saveUserProfile() {
         val userId = auth.currentUser?.uid
         userId?.let {
+            val ageText = ageEditText.text.toString()
+            val phoneText = phoneEditText.text.toString()
+
+            if (ageText.isBlank() || !ageText.all { it.isDigit() }) {
+                Toast.makeText(this, "Please enter a valid age", Toast.LENGTH_SHORT).show()
+                return
+            }
+
+            if (phoneText.isBlank() || !phoneText.all { it.isDigit() }) {
+                Toast.makeText(this, "Please enter a valid phone number", Toast.LENGTH_SHORT).show()
+                return
+            }
+
             val user = hashMapOf(
                 "fullName" to fullNameEditText.text.toString(),
-                "age" to ageEditText.text.toString().toInt(),
-                "phone" to phoneEditText.text.toString(),
+                "age" to ageText.toInt(),
+                "phone" to phoneText.toLong(),
                 "email" to emailEditText.text.toString(),
                 "address" to addressEditText.text.toString(),
                 "profileImageUrl" to (currentProfileImageUrl ?: "") // Retain the current profile image URL if not changing
