@@ -10,12 +10,11 @@ class DonationListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_donation_list)
 
-        // Menghubungkan ImageView dengan ID back_button
         val backButton: ImageView = findViewById(R.id.back_button)
-
-        // Menambahkan OnClickListener ke backButton
         backButton.setOnClickListener {
             onBackPressed()
         }
+
+        // Implementasi logika untuk menampilkan daftar donasi
     }
 }
