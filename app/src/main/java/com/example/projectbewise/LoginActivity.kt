@@ -38,12 +38,13 @@ class LoginActivity : AppCompatActivity() {
                                     .addOnSuccessListener { document ->
                                         if (document != null) {
                                             val fullName = document.getString("fullName")
-                                            val phone = document.getString("phone")
+                                            val phone = document.getLong("phone")?.toString() // Handle phone as Long and convert to String
                                             // Use the user information as needed
                                             Toast.makeText(this, "Welcome $fullName", Toast.LENGTH_SHORT).show()
                                             // Navigate to main activity with user data
                                             val intent = Intent(this, MainActivity::class.java).apply {
                                                 putExtra("fullName", fullName)
+                                                putExtra("phone", phone)
                                             }
                                             startActivity(intent)
                                             finish()

@@ -7,18 +7,24 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
+import com.google.firebase.Timestamp
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DonationActivity : AppCompatActivity() {
+class DonationActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var db: FirebaseFirestore
     private lateinit var storage: FirebaseStorage
@@ -30,6 +36,10 @@ class DonationActivity : AppCompatActivity() {
     private lateinit var tanggalSelesai: EditText
     private lateinit var jenisDonasiSpinner: Spinner
     private lateinit var jenisDonasiLainnya: EditText
+    private lateinit var tempatDonasi: EditText
+
+    private lateinit var googleMap: GoogleMap
+    private var selectedLocation: LatLng? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,11 +69,31 @@ class DonationActivity : AppCompatActivity() {
         tanggalSelesai = findViewById(R.id.tanggal_selesai)
         jenisDonasiSpinner = findViewById(R.id.jenis_donasi_spinner)
         jenisDonasiLainnya = findViewById(R.id.jenis_donasi_lainnya)
+        tempatDonasi = findViewById(R.id.tempat_donasi)
 
         tanggalMulai.setOnClickListener { showDatePickerDialog(tanggalMulai) }
         tanggalSelesai.setOnClickListener { showDatePickerDialog(tanggalSelesai) }
 
         setupJenisDonasiSpinner()
+
+        // Initialize map
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
+        mapFragment?.getMapAsync(this)
+    }
+
+    override fun onMapReady(map: GoogleMap) {
+        googleMap = map
+        googleMap.uiSettings.isZoomControlsEnabled = true
+
+        // Default location (e.g., city center)
+        val defaultLocation = LatLng(-6.200000, 106.816666) // Jakarta, Indonesia
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(defaultLocation, 10f))
+
+        googleMap.setOnMapClickListener { location ->
+            googleMap.clear()
+            googleMap.addMarker(MarkerOptions().position(location).title("Lokasi Donasi"))
+            selectedLocation = location
+        }
     }
 
     private fun showDatePickerDialog(editText: EditText) {
@@ -120,9 +150,10 @@ class DonationActivity : AppCompatActivity() {
         val tanggalMulaiStr = tanggalMulai.text.toString()
         val tanggalSelesaiStr = tanggalSelesai.text.toString()
         val deskripsiDonasi = findViewById<EditText>(R.id.deskripsi_donasi).text.toString()
+        val tempatDonasiStr = tempatDonasi.text.toString()
 
-        if (namaDonasi.isEmpty() || jenisDonasi.isEmpty() || tanggalMulaiStr.isEmpty() || tanggalSelesaiStr.isEmpty() || deskripsiDonasi.isEmpty() || imageUri == null) {
-            Toast.makeText(this, "Harap isi semua kolom dan upload gambar", Toast.LENGTH_SHORT).show()
+        if (namaDonasi.isEmpty() || jenisDonasi.isEmpty() || tanggalMulaiStr.isEmpty() || tanggalSelesaiStr.isEmpty() || deskripsiDonasi.isEmpty() || tempatDonasiStr.isEmpty() || imageUri == null || selectedLocation == null) {
+            Toast.makeText(this, "Harap isi semua kolom dan pilih lokasi pada peta", Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -134,10 +165,15 @@ class DonationActivity : AppCompatActivity() {
             val donasi = hashMapOf(
                 "namaDonasi" to namaDonasi,
                 "jenisDonasi" to jenisDonasi,
-                "tanggalMulai" to tanggalMulai,
-                "tanggalSelesai" to tanggalSelesai,
+                "tanggalMulai" to Timestamp(Date(tanggalMulai)),
+                "tanggalSelesai" to Timestamp(Date(tanggalSelesai)),
                 "deskripsiDonasi" to deskripsiDonasi,
-                "imageUrl" to imageUrl
+                "tempatDonasi" to tempatDonasiStr,
+                "imageUrl" to imageUrl,
+                "lokasiDonasi" to hashMapOf(
+                    "latitude" to selectedLocation!!.latitude,
+                    "longitude" to selectedLocation!!.longitude
+                )
             )
 
             db.collection("donasi")
@@ -160,12 +196,13 @@ class DonationActivity : AppCompatActivity() {
         val alertDialog = builder.create()
         alertDialog.show()
 
-        Handler(Looper.getMainLooper()).postDelayed({
+        val handler = Handler(Looper.getMainLooper())
+        handler.postDelayed({
             alertDialog.dismiss()
             val intent = Intent(this, DonationListActivity::class.java)
             startActivity(intent)
             finish()
-        }, 1500) // Menunggu selama 1,5 detik
+        }, 3000) // Menunggu selama 3 detik
     }
 
     private fun selectImage() {
