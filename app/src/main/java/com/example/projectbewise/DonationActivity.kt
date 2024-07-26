@@ -86,7 +86,7 @@ class DonationActivity : AppCompatActivity(), OnMapReadyCallback {
         googleMap.uiSettings.isZoomControlsEnabled = true
 
         // Default location (e.g., city center)
-        val defaultLocation = LatLng(-6.200000, 106.816666) // Jakarta, Indonesia
+        val defaultLocation = LatLng(0.5071, 101.4478) // Pekanbaru, Indonesia
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(defaultLocation, 10f))
 
         googleMap.setOnMapClickListener { location ->
