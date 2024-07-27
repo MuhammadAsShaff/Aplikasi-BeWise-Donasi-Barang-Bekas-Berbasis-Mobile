@@ -8,10 +8,10 @@
     android:elevation="2dp">
 
     <ImageView
+        android:id="@+id/image_view"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_weight="1"
-        android:src="@drawable/donation_image"
         android:scaleType="centerCrop"
         android:contentDescription="Donation Image"
         android:layout_marginEnd="12dp"
@@ -24,29 +24,27 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/nama_donasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ayo berbagi pakaian yang layak pakai"
             android:textColor="@android:color/black"
             android:textSize="16sp"
             android:fontFamily="@font/poppins_bold"
             android:layout_marginBottom="4dp" />
 
         <TextView
+            android:id="@+id/tempat_donasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Panti Asuhan Ujung Jalan"
             android:textColor="@android:color/darker_gray"
             android:textSize="14sp"
             android:fontFamily="@font/poppins_regular"
             android:layout_marginBottom="8dp" />
 
-        <!-- Progress Indicator -->
         <ProgressBar
+            android:id="@+id/progress_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:progress="50"
-            android:max="100"
             android:layout_marginBottom="8dp"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:progressDrawable="@drawable/progress_bar" />
@@ -59,6 +57,7 @@
             android:gravity="center_vertical">
 
             <Button
+                android:id="@+id/detail_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Selengkapnya"
@@ -67,17 +66,16 @@
                 android:fontFamily="@font/poppins_bold"
                 android:paddingLeft="28dp"
                 android:paddingRight="28dp"
-                android:layout_marginEnd="12dp"
-                />
+                android:layout_marginEnd="12dp" />
 
             <TextView
+                android:id="@+id/sisa_hari"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sisa Hari 58"
                 android:textColor="@color/blue"
                 android:textSize="14sp"
                 android:fontFamily="@font/poppins_bold"
-                android:gravity="end"/>
+                android:gravity="end" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -46,7 +46,7 @@ class ProfileActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_history -> {
-                    startActivity(Intent(this, HistoryActivity::class.java))
+                    startActivity(Intent(this, DonationListActivity::class.java))
                     true
                 }
                 R.id.navigation_profile -> {

@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 return true
             }
             R.id.navigation_history -> {
-                val intent = Intent(this, HistoryActivity::class.java)
+                val intent = Intent(this, DonationListActivity::class.java)
                 startActivity(intent)
                 return true
             }

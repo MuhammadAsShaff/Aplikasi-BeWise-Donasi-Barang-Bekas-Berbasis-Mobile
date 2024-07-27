@@ -14,13 +14,13 @@
     <item
         android:id="@+id/navigation_donation"
         android:icon="@drawable/ic_donasi"
-        android:title="Donasi"
+        android:title="Tambah"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/navigation_history"
         android:icon="@drawable/ic_riwayat"
-        android:title="Donatur"
+        android:title="Donasi"
         app:showAsAction="ifRoom" />
 
     <item
