@@ -19,6 +19,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.GeoPoint
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import java.text.SimpleDateFormat
@@ -170,10 +171,7 @@ class DonationActivity : AppCompatActivity(), OnMapReadyCallback {
                 "deskripsiDonasi" to deskripsiDonasi,
                 "tempatDonasi" to tempatDonasiStr,
                 "imageUrl" to imageUrl,
-                "lokasiDonasi" to hashMapOf(
-                    "latitude" to selectedLocation!!.latitude,
-                    "longitude" to selectedLocation!!.longitude
-                )
+                "lokasiDonasi" to GeoPoint(selectedLocation!!.latitude, selectedLocation!!.longitude)
             )
 
             db.collection("donasi")

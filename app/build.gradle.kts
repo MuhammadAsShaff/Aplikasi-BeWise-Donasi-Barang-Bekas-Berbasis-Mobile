@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.gms.google-services")
+    id("kotlin-parcelize") // Tambahkan ini
 }
 
 android {
@@ -49,9 +50,9 @@ dependencies {
     implementation("androidx.viewpager2:viewpager2:1.0.0")
     implementation("com.google.firebase:firebase-auth-ktx:21.0.1")
     implementation("com.google.firebase:firebase-storage-ktx:19.2.2")
-    implementation("com.google.firebase:firebase-firestore-ktx:24.0.0") // Firestore KTX dependency
-    implementation("com.github.bumptech.glide:glide:4.12.0") // Glide for image loading
-    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0") // Glide compiler
+    implementation("com.google.firebase:firebase-firestore-ktx:24.0.0")
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -63,6 +64,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.play.services.maps)
     implementation(libs.androidx.coordinatorlayout)
+    implementation("org.jetbrains.kotlin:kotlin-parcelize-runtime:1.5.21") // Pastikan versi Kotlin sesuai
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

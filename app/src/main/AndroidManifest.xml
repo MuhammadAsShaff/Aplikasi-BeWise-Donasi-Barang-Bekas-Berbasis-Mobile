@@ -33,8 +33,9 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".DonationActivity" />
-        <activity android:name=".HistoryActivity" />
+        <activity android:name=".DonationDetailActivity" />
         <activity android:name=".ProfileEditActivity" />
+        <activity android:name=".ConfirmationDetailActivity" />
         <activity android:name=".FAQActivity" />
         <activity android:name=".DonationListActivity" />
         <activity android:name=".DonorsActivity" />
