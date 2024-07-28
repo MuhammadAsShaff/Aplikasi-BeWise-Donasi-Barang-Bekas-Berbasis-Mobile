@@ -87,7 +87,10 @@ class ProfileEditActivity : AppCompatActivity() {
                         profileNameTextView.text = fullName // Set the profile name TextView
                         fullNameEditText.setText(fullName)
                         ageEditText.setText(document.getLong("age")?.toString())
-                        phoneEditText.setText(document.getString("phone"))
+
+                        val phone = document.getLong("phone")?.toString()
+                        phoneEditText.setText(phone)
+
                         emailEditText.setText(document.getString("email"))
                         addressEditText.setText(document.getString("address"))
 
