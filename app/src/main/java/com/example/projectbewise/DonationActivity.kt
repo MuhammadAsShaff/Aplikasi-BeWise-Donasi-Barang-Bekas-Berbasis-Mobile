@@ -200,7 +200,7 @@ class DonationActivity : AppCompatActivity(), OnMapReadyCallback {
             val intent = Intent(this, DonationListActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000) // Menunggu selama 3 detik
+        }, 1500) // Menunggu selama 3 detik
     }
 
     private fun selectImage() {
