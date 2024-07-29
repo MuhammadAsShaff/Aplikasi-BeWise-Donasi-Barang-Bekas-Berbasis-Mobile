@@ -111,7 +111,8 @@
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/poppins_regular"
                     android:justificationMode="inter_word"
-                    android:text="Tolong berikan barang ini kepada panti asuhan ujung jalan supaya barang nya bisa di gunakan dan bermanfaat"
+                    android:text="Tolong berikan barang ini kepada panti asuhan ujung
+                     jalan supaya barang nya bisa di gunakan dan bermanfaat"
                     android:textColor="@android:color/darker_gray"
                     android:textSize="14sp" />
             </LinearLayout>

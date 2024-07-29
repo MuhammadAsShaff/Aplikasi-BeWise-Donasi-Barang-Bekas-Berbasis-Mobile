@@ -24,11 +24,11 @@ class RegisterActivity : AppCompatActivity() {
         binding.registerButton.setOnClickListener {
             val fullName = binding.fullName.text.toString()
             val email = binding.email.text.toString()
-            val phone = binding.phone.text.toString()
+            val phone = binding.phone.text.toString().toLongOrNull() // Konversi phone menjadi Long
             val password = binding.password.text.toString()
             val confirmPassword = binding.confirmPassword.text.toString()
 
-            if (email.isNotEmpty() && password.isNotEmpty() && password == confirmPassword) {
+            if (email.isNotEmpty() && password.isNotEmpty() && password == confirmPassword && phone != null) {
                 auth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
@@ -66,4 +66,4 @@ class RegisterActivity : AppCompatActivity() {
 }
 
 // User data class to store user information in Firebase Firestore
-data class User(val fullName: String, val email: String, val phone: String)
+data class User(val fullName: String, val email: String, val phone: Long) // Ubah phone menjadi Long
