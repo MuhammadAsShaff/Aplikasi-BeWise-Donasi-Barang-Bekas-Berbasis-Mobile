@@ -60,7 +60,8 @@ class DonationDetailActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-    private fun loadDonationDetails(donationId: String, donationImage: ImageView, namaDonasiTextView: TextView, tempatDonasiTextView: TextView, sisaHariTextView: TextView, deskripsiDonasiTextView: TextView, progressBar: ProgressBar, pelaporanEditText: EditText) {
+    private fun loadDonationDetails(donationId: String, donationImage: ImageView, namaDonasiTextView: TextView, tempatDonasiTextView: TextView,
+                                    sisaHariTextView: TextView, deskripsiDonasiTextView: TextView, progressBar: ProgressBar, pelaporanEditText: EditText) {
         db.collection("donasi").document(donationId).get().addOnSuccessListener { document ->
             if (document != null) {
                 val imageUrl = document.getString("imageUrl")
